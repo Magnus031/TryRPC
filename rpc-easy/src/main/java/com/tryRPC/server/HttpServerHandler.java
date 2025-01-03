@@ -60,7 +60,7 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
                 // 封装返回的结果
                 rpcResponse.setData(result);
                 rpcResponse.setDataType(method.getReturnType());
-                rpcResponse.setData("ok");
+                rpcResponse.setMessage("Ok");
             }catch (Exception e){
                 e.printStackTrace();
                 rpcResponse.setMessage(e.getMessage());

@@ -31,7 +31,7 @@ public class UserServiceProxy implements UserService {
             byte[] result;
 
             // 模拟了一个 HTTP 请求的过程;
-            try(HttpResponse httpResponse = HttpRequest.post("http://localhost:8080/")
+            try(HttpResponse httpResponse = HttpRequest.post("http://localhost:8000/")
                     .header("Content-Type", "application/json")
                     .body(bodyBytes)
                     .execute()){

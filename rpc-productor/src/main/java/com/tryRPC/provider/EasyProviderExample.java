@@ -13,6 +13,6 @@ public class EasyProviderExample {
 
         // here test for the web server
         HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(8080);
+        httpServer.doStart(8000);
     }
 }
