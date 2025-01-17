@@ -1,0 +1,4 @@
+jdk=com.tryRPC.serializer.JdkSerializer
+hessian=com.tryRPC.serializer.HessianSerializer
+json=com.tryRPC.serializer.JsonSerializer
+kryo=com.tryRPC.serializer.KryoSerializer
