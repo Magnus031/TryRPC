@@ -1,15 +1,16 @@
 package com.tryRPC.server;
 
+import com.tryRPC.Holder;
 import com.tryRPC.model.RpcRequest;
 import com.tryRPC.model.RpcResponse;
 import com.tryRPC.register.LocalRegister;
 import com.tryRPC.serializer.JdkSerializer;
 import com.tryRPC.serializer.Serializer;
+import com.tryRPC.serializer.SerializerFactory;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.core.http.HttpServerResponse;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -25,8 +26,8 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
      */
     @Override
     public void handle(HttpServerRequest request) {
-        // 指定序列化器皿
-        final Serializer serializer = new JdkSerializer();
+        // 指定序列化器皿 -> We use the Serializer Factory to get the serializer
+        final Serializer serializer = SerializerFactory.getInstance(Holder.getRpcConfig().getSerializer());
 
         // 记录日志
         System.out.println("Received request " + request.method() + " " + request.uri());

@@ -10,4 +10,13 @@ public interface UserService {
      * @return
      */
     User getUser(User user);
+
+
+    /**
+     * Used to set for a mock part method;
+     * @return
+     */
+    default int getNumber(){
+        return 3;
+    }
 }

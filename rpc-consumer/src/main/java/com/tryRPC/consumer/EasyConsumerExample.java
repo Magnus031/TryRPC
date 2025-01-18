@@ -20,7 +20,7 @@ public class EasyConsumerExample
         // UserService userService = new UserServiceProxy();
         // 改用动态代理
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
-
+        System.out.println("UserService.class : "+ UserService.class);
         User user = new User();
         user.setName("Kobe");
 
@@ -30,7 +30,8 @@ public class EasyConsumerExample
         }else{
             System.out.println("user == null");
         }
-
+        long number = userService.getNumber();
+        System.out.println("Number is: " + number);
 
     }
 }

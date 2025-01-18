@@ -1,0 +1,7 @@
+# 对应 RpcConfig 中的属性
+name : tryRpc
+version : 1.0.0
+serverHost : localhost
+serverPort : 8000
+isMock : false
+serializer : kryo

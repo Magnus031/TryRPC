@@ -13,6 +13,7 @@
         <module>rpc-productor</module>
         <module>rpc-easy</module>
         <module>rpc-common</module>
+        <module>rpc-core</module>
     </modules>
 
     <properties>

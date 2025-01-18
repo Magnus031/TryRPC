@@ -7,4 +7,8 @@
 This is a **RPC framework** implemented by Java. It is based on the Netty Framework.
 
 
+## Process
 
+1. **EASY VERSION**: SEE 2025-1-4 **commit** 
+  
+2. **Add for Global Configuration** 增加全局配置
